@@ -13,6 +13,9 @@
      <div class="migaku-card-content">
          <span class="migaku-word-front">{{Sentence Audio}}</span>
 
+         <!--This is used by the button to unhide the text-->
+         <div class="migaku-sentence" id="ID" style="display:none" ><div display-type="coloredkanjireading" class="wrapped-japanese">{{Sentence}}</div></div>
+
          <br>
 
          <span>
@@ -42,11 +45,7 @@
 "> 
     
         <span>
-            <button class="button" type="button"  onclick="
-            if(document.getElementById('ID') .style.display=='none')
-               {document.getElementById('ID') .style.display=''}
-            else
-               {document.getElementById('ID') .style.display='none'}">
+            <button class="button" type="button"  onclick="hidebutton()">
            unhide
             </button>
     
@@ -913,5 +912,22 @@ for (h of hints) {
       document.getElementById('a' + this.id).style.display='inline';
     };
   }
+}
+  
+document.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+    if (evt.keyCode == "82") {
+     hidebutton()   
+    }
+}
+
+function hidebutton(){
+  
+  if(document.getElementById('ID') .style.display=='none')
+    {document.getElementById('ID') .style.display=''}
+  else
+    {document.getElementById('ID') .style.display='none'}
+
 }
 </script>

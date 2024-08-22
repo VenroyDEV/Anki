@@ -14,7 +14,7 @@
       {{Image}}
   </div>
   <div class="migaku-card-content">
-      <div class="migaku-word-back"></div><div display-type="coloredkanjireading" class="wrapped-japanese">{{Target Word}}</div></div>
+    <div class="migaku-word-back"><div display-type="coloredkanjireading" class="wrapped-japanese"><div class="field" data-popup="yes" data-furigana="yes" data-pitch-coloring="yes" data-pitch-shapes="hover">{{Target Word}}</div></div></div>
       <div class="migaku-word-audio">{{Word Audio}}</div>
       <div class="migaku-sentence" id="sentence" style="display:inline"><div display-type="coloredkanjireading" class="wrapped-japanese">{{Sentence}}</div></div>
       <div class="migaku-sentence" id="plain-sentence" style="display:none" ><div display-type="coloredkanjireading" class="wrapped-japanese">{{Plain Sentence}}</div></div>
@@ -34,7 +34,7 @@
       {
         document.getElementById('sentence').style.display='inline'
         document.getElementById('plain-sentence').style.display='none';
-      }">Toggle
+      }">Pitch Test
      </button>
 
 
